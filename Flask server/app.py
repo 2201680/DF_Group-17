@@ -21,5 +21,11 @@ def clear_files():
         file.truncate(0)
     return 'File cleared successfully!'
 
+@app.route('/data',methods=['GET'])
+def read_file():
+    with open('data.txt', 'r') as file:
+        text = file.read()
+    return text
+
 if __name__ == "__main__":
     app.run(debug=True)
