@@ -23,9 +23,11 @@ This project is based on the Android Open Source Project (AOSP) and is specifica
 
 ### To Build the Project
 
-1. Clone this repository.
+1. Clone the AOSP repository From [Here:] ("https://android.googlesource.com/device/google/barbet")
 2. Navigate to the project folder.
-3. Source the build environment:
+3. Clone The DocumentsUI From this repo. 
+4. Replace the DocumentsUI Folder from Step(1) with the DocumentsUI from step(3)
+5. Source the build environment:
    ```bash
    source build/envsetup.sh
    ```
