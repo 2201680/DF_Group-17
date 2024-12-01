@@ -38,12 +38,12 @@ This project is based on the Android Open Source Project (AOSP) and is specifica
     m
     ```
 
-    To Flash the Code to the Device
+    To Flash the Code to the Device  
+    Reboot the device into bootloader mode:
     
-        Reboot the device into bootloader mode:
-    
+    ```bash
     adb reboot bootloader
-    
+    ```
     Flash the build to the device:
     
         fastboot flashall
