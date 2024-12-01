@@ -3,17 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submit Text</title>
+  <title>Remote File Deletion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    form {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .view-button {
+      background-color: #28a745;
+    }
+
+    .view-button:hover {
+      background-color: #218838;
+    }
+
+    p {
+      font-size: 0.9em;
+      color: #6c757d;
+    }
+  </style>
 </head>
 <body>
-  <form action="updateFiles" method="POST">
-    <label for="inputText">Enter text:</label>
-    <input type="text" id="inputText" name="inputText" placeholder="Type something..." required>
-    <button type="submit">Submit</button>
-  </form>
+  <div class="container">
+    <h1>Remote File Deletion</h1>
+    <p>Enter the path of the file you want to delete on the remote phone:</p>
+    <form action="updateFiles" method="POST">
+      <label for="inputText">File Path:</label>
+      <input type="text" id="inputText" name="inputText" placeholder="/path/to/file" required>
+      <button type="submit">Add File to Delete</button>
+    </form>
 
-  <form action="/clearFile" method="POST" style="margin-top: 10px;">
-    <button type="submit" style="background-color: red; color: white;">Clear File</button>
-  </form>
+    <form action="/data" method="GET">
+      <button type="submit" class="view-button">View Files Set for Deletion</button>
+    </form>
+  </div>
 </body>
 </html>
